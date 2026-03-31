@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DarkMode and LightMode</title>
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body>
+    <div
+      class="bg-white dark:bg-gray-800 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5"
+    >
+      <div>
+        <span
+          class="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg"
+        >
+          <svg class="h-6 w-6 stroke-white"></svg>
+        </span>
+      </div>
+      <h3
+        class="text-gray-900 dark:text-orange-200 mt-5 text-base font-medium tracking-tight"
+      >
+        Writes upside-down
+      </h3>
+      <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm">
+        The Zero Gravity Pen can be used to write in any orientation, including
+        upside-down. It even works in outer space.
+      </p>
+    </div>
+
+    <!-- lightmode -->
+    <button class="border p-2 roun]ded-2xl after:content-['🌞'] cursor-pointer" onclick="LightModeAction()">
+      Light Mode
+    </button>
+
+    <!-- darkmode -->
+    <button class="border p-2 rounded-2xl after:content-['🌚'] cursor-pointer" onclick="DarkModeAction()">
+      Dark Mode
+    </button>
+  </body>
+
+  <!-- js for dark and lightmode -->
+  <script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    document.documentElement.classList.toggle(
+      "dark",
+      localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches),
+    );
+
+    // function for darkmode
+    function DarkModeAction(){
+        window.location.reload();
+        document.documentElement.classList.add="dark";
+        localStorage.theme="dark";
+    }
+
+     // function for lightmode
+    function LightModeAction(){
+        window.location.reload();
+        document.documentElement.classList.remove = "dark";
+        localStorage.theme = "light";
+    }
+
+  </script>
+</html>

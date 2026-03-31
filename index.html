@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- link output.css -->
+     <link rel="stylesheet" href="./src/output.css">
+
+    <!-- link play cdn of tailwindcss -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+  </head>
+  <body>
+
+    <!-- there are 5 breakpoints in tailwindcss (sm, md, lg, xl, 2xl) -->
+
+    <!-- when breakpoints using as prefix it will use for responsive -->
+    <div class="p-8 text-2xl bg-amber-400 after:content-['smallest'] sm:bg-amber-500 sm:after:content-['small'] md:bg-amber-600 md:after:content-['medium'] lg:bg-amber-700 lg:after:content-['large'] xl:bg-amber-800 xl:after:content-['extralarge']">
+      Content
+    </div>
+
+
+    <!--  pseudo class in tailwindcss-->
+      <button class="bg-violet-500 hover:bg-violet-600 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-amber-500 mt-4 p-4 rounded">
+       <a href="https://devtron.ai/" class="visited:text-pink-500">Devtrons</a>
+</button>
+
+    <input type="text" class="required:border-red-500 placeholder:italic placeholder:text-pink-300 border" required placeholder="please input the info">
+
+    <!-- pseudo element -->
+     <ul role="list " class="mt-8 border p-4">
+    <!-- Remove top/bottom padding when first/last child -->
+    <li class="flex py-4 first:pt-0 last:pb-0 first:bg-amber-100 odd:bg-pink-100">
+      <img class="h-10 w-10 rounded-full" src="./photos/1.jpg" alt="" />
+      <div class="ml-3 overflow-hidden">
+        <p class="text-sm font-medium text-gray-900 dark:text-white">Person 1</p>
+        <p class="truncate text-sm text-gray-500 dark:text-gray-400">person1@gmail.com</p>
+      </div>
+    </li>
+
+    <!-- list 2 -->
+       <li class="flex py-4 first:pt-0 last:pb-0 even:bg-purple-100 ">
+      <img class="h-10 w-10 rounded-full" src="./photos/2.jpg" alt="" />
+      <div class="ml-3 overflow-hidden">
+        <p class="text-sm font-medium text-gray-900 dark:text-white">Person 2</p>
+        <p class="truncate text-sm text-gray-500 dark:text-gray-400">person1@gmail.com</p>
+      </div>
+    </li>
+
+    <!-- list3 -->
+       <li class="flex py-4 first:pt-0 last:pb-0">
+      <img class="h-10 w-10 rounded-full" src="./photos/3.png" alt="" />
+      <div class="ml-3 overflow-hidden">
+        <p class="text-sm font-medium text-gray-900 dark:text-white">Person 3</p>
+        <p class="truncate text-sm text-gray-500 dark:text-gray-400">person1@gmail.com</p>
+      </div>
+    </li>
+
+    <!-- list4 -->
+       <li class="flex py-4 first:pt-0 last:pb-0">
+      <img class="h-10 w-10 rounded-full" src="./photos/4.jpg" alt="" />
+      <div class="ml-3 overflow-hidden">
+        <p class="text-sm font-medium text-gray-900 dark:text-white">Person 4</p>
+        <p class="truncate text-sm text-gray-500 dark:text-gray-400">person1@gmail.com</p>
+      </div>
+    </li>
+
+    <!-- list5 -->
+       <li class="flex py-4 first:pt-0 last:pb-0 last:bg-amber-100">
+      <img class="h-10 w-10 rounded-full" src="./photos/5.png" alt="" />
+      <div class="ml-3 overflow-hidden">
+        <p class="text-sm font-medium text-gray-900 dark:text-white">Person 5</p>
+        <p class="truncate text-sm text-gray-500 dark:text-gray-400">person1@gmail.com</p>
+      </div>
+    </li>
+
+</ul>
+
+<label for="" class="after:content-['🥹'] before:content-['🌚']">Email</label>
+
+  </body>
+</html>
